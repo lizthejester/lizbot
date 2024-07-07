@@ -150,6 +150,7 @@ class Lizbot(discord.Client):
         except Exception as e:
             print(e)
 
+
 def get_response(message: discord.message, user_input: str) -> str:
     lowered: str = user_input.lower()
     print(lowered)
@@ -397,7 +398,7 @@ def initdeck(message: discord.message):
 
 
 def get_quote() -> str:
-    # ask zenquotes api for random quote
+    # ask zenquotes API for random quote
     response: str = requests.get("https://zenquotes.io/api/random")
     print(response)
     # json_data is ...unsure...(argument: response as string)
@@ -411,6 +412,10 @@ def get_quote() -> str:
 def dateTime():
     print(time.ctime())
     return time.ctime()
+
+
+def cum():
+    return "cum"
 
 
 intents = discord.Intents.default()
